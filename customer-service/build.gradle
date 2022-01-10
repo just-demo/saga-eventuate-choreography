@@ -1,0 +1,25 @@
+dependencies {
+    implementation project(":customer-service-api")
+    implementation project(":order-service-api")
+
+    implementation "org.springframework.cloud:spring-cloud-starter-sleuth"
+    implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin"
+    implementation "io.zipkin.brave:brave-bom:$braveVersion"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-cloud-sleuth-integration"
+
+
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-jdbc-kafka"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-events"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-optimistic-locking"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-events-starter"
+
+    implementation "mysql:mysql-connector-java:5.1.36"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+
+    implementation "io.eventuate.tram.view.support:eventuate-tram-view-support-rebuild:$eventuateTramViewSupportVersion"
+
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "io.springfox:springfox-boot-starter:$springfoxVersion"
+}

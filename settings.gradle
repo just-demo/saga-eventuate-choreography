@@ -1,0 +1,5 @@
+include 'customer-service-api'
+include 'customer-service'
+include 'order-service-api'
+include 'order-service'
+include 'history-service'

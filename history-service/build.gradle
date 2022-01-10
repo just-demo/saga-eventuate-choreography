@@ -1,0 +1,21 @@
+dependencies {
+    implementation project(":customer-service-api")
+    implementation project(":order-service-api")
+
+    implementation "org.springframework.cloud:spring-cloud-starter-sleuth"
+    implementation "org.springframework.cloud:spring-cloud-sleuth-zipkin"
+    implementation "io.zipkin.brave:brave-bom:${braveVersion}"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-cloud-sleuth-integration"
+
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-consumer-kafka"
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-events-subscriber-starter"
+
+    implementation "org.springframework.boot:spring-boot-starter-data-mongodb"
+    implementation "org.springframework.boot:spring-boot-starter-aop"
+    implementation "org.springframework.retry:spring-retry"
+
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "io.springfox:springfox-boot-starter:3.0.0"
+}
